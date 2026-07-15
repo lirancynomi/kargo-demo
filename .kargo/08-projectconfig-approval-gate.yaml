@@ -1,0 +1,16 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: ProjectConfig
+metadata:
+  name: kargo-demo
+  namespace: kargo-demo
+spec:
+  promotionPolicies:
+  - stageSelector:
+      name: test
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: uat
+    autoPromotionEnabled: true
+  - stageSelector:
+      name: prod
+    autoPromotionEnabled: false   # prod requires a manual `kargo promote` (or UI click) — the approval gate

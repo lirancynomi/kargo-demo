@@ -1,0 +1,8 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Promotion
+metadata:
+  name: test-promo-01
+  namespace: kargo-demo
+spec:
+  stage: test
+  freight: 1b376979eff53acc7ce6362fb552542697fa29d5
